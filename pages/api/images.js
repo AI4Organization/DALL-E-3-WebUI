@@ -1,16 +1,15 @@
-import { OpenAIApi, Configuration } from 'openai';
+import { OpenAI } from 'openai';
 
 export default async function handler(req, res) {
-  const configuration = new Configuration({
+  const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
   });
-  const openai = new OpenAIApi(configuration);
 
-  const response = await openai.createImage({
+  const response = await openai.images.generate({
     prompt: req.query.p,
     n: parseInt(req.query.n),
     size: "1024x1024",
   });
-  console.log(response.data.data);
-  res.status(200).json({ result: response.data.data })
+  console.log(response.data);
+  res.status(200).json({ result: response.data })
 }
