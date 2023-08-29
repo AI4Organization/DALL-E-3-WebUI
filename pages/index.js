@@ -6,7 +6,6 @@ import styles from "../styles/Home.module.css";
 import axios from "axios";
 
 export default function Home() {
-  const [token, setToken] = useState("");
   const [prompt, setPrompt] = useState("");
   const [number, setNumber] = useState(9);
   const [results, setResults] = useState([]);
@@ -14,6 +13,7 @@ export default function Home() {
   const [error, setError] = useState(false);
 
   function getImages() {
+    const token = process.env.OPENAI_API_KEY;
     if (token != "" && prompt != "") {
       setError(false);
       setLoading(true);
@@ -59,13 +59,6 @@ export default function Home() {
           Create images with <span className={styles.titleColor}>DALLE-2</span>
         </h1>
         <p className={styles.description}>
-          <input
-            id="token"
-            type="text"
-            value={token}
-            onChange={(e) => setToken(e.target.value)}
-            placeholder="Bearer Token (sk-...)"
-          />
           <input
             id="prompt"
             type="text"
