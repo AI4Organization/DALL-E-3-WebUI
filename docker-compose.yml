@@ -1,6 +1,6 @@
 version: '3'
 services:
-  nimages-generator-with-dalle-2:
+  images-generator-with-dalle-2:
     build: .
     ports:
       - '3000:3000'
