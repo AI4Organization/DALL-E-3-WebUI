@@ -51,12 +51,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>L'Art Coquette - DALLE-2</title>
+        <title>L'Art Coquette - DALL-E 2</title>
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Create images with <span className={styles.titleColor}>DALLE-2</span>
+          Create images with <span className={styles.titleColor}>DALL-E 2</span>
         </h1>
         <p className={styles.description}>
           <input
