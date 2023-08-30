@@ -1,5 +1,5 @@
-.PHONY: start-local
-start-local:
+.PHONY: start-server-local
+start-server-local:
 	npm run build && npm run start
 
 .PHONY: start-docker-compose-local
