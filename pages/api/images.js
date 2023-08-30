@@ -11,5 +11,5 @@ export default async function handler(req, res) {
     size: "1024x1024",
   });
   console.log(response.data);
-  res.status(200).json({ result: response.data })
+  res.status(200).json({ result: response.data });
 }
