@@ -39,15 +39,3 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 1. Input token start from `sk-`
 2. Query anything, e.g. `cat on space`:
 <img width="1024" alt="CleanShot 2022-06-18 at 16 36 25@2x" src="https://user-images.githubusercontent.com/54872601/174429869-97ce491e-6aa1-4887-a7e9-f9b99b5df38a.png">
-
-## Structure
-![Diagram](https://raw.githubusercontent.com/1998code/DALLE-2-App/v1/diagram.svg)
-
-## Deploy on Vercel
-Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Developer Notes
-- V2 is using OpenAI official API. V1 is using OpenAI Labs Bearer Key.
-
-## License
-MIT
