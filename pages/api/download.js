@@ -2,7 +2,6 @@ import axios from "axios";
 import sharp from "sharp";
 
 export default async function handler(req, res) {
-
   const url = req.body.url;
   const type = req.body.type;
 
