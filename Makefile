@@ -5,3 +5,13 @@ start-server-local:
 .PHONY: start-docker-compose-local
 start-docker-compose-local:
 	docker-compose up --build -d
+
+# stop local services
+.PHONY: stop-docker-compose-local
+stop-local:
+	docker-compose -f docker-compose.yml down
+
+# prune local services
+.PHONY: prune-docker-compose-local
+prune-local:
+	docker-compose -f docker-compose.yml down && yes | docker volume prune
