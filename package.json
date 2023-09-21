@@ -1,7 +1,7 @@
 {
-  "name": "images-generator-with-dalle-2",
+  "name": "images-generator-with-dalle-3",
   "version": "2.0.10",
-  "description": "Images generator with DALL-E 2",
+  "description": "Images generator with DALL-E 3",
   "author": "AI4Organization Engineers",
   "private": true,
   "engines": {
@@ -28,9 +28,12 @@
     "buffer": "^6.0.3",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.2",
+    "follow-redirects": "^1.15.3",
     "ieee754": "^1.2.1",
+    "nanoid": "^5.0.1",
     "postcss": "^8.4.30",
     "queue-microtask": "^1.2.3",
+    "resolve-pkg-maps": "^1.0.0",
     "run-parallel": "^1.2.0",
     "safe-buffer": "^5.2.1",
     "simple-concat": "^1.0.1",
