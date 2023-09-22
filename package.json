@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "Images generator with DALL-E 3",
   "author": "AI4Organization Engineers",
-  "private": true,
+  "license": "MIT",
   "engines": {
     "node": ">=20.0.0"
   },
