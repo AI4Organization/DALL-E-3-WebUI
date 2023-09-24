@@ -22,11 +22,11 @@
     "sharp": "^0.32.6"
   },
   "devDependencies": {
-    "@types/node": "^20.6.3",
+    "@types/node": "^20.6.4",
     "@types/react": "18.2.22",
     "base64-js": "^1.5.1",
     "buffer": "^6.0.3",
-    "eslint": "8.49.0",
+    "eslint": "8.50.0",
     "eslint-config-next": "13.5.2",
     "follow-redirects": "^1.15.3",
     "ieee754": "^1.2.1",
