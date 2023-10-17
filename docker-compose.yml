@@ -1,6 +1,6 @@
 version: '3'
 services:
-  images-generator-with-dalle-2:
+  images-generator-with-dalle-3:
     build: .
     ports:
       - '3000:3000'
