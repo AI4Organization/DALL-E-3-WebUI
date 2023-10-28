@@ -14,4 +14,5 @@ stop-docker-compose-local:
 # prune local services
 .PHONY: prune-docker-compose-local
 prune-docker-compose-local:
-	docker-compose -f docker-compose.yml down && yes | docker volume prune
+ prune-docker-compose-local:
+   docker-compose -f docker-compose.yml down && yes | docker volume prune -v
