@@ -7,7 +7,7 @@ import axios from "axios";
 
 export default function Home() {
   const [prompt, setPrompt] = useState("");
-  const [number, setNumber] = useState(10);
+  const [number, setNumber] = useState(1);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -18,7 +18,7 @@ export default function Home() {
       setError(false);
       setLoading(true);
       axios
-        .post(`/api/images?t=${token}&p=${prompt}&n=${number}`)
+        .post(`/api/images?t=${token}&p=${prompt}&n=${number}&q=${quality}&s=${size}&st=${style}`)
         .then((res) => {
           setResults(res.data.result);
           setLoading(false);
@@ -33,6 +33,9 @@ export default function Home() {
   }
 
   const [type, setType] = useState("webp");
+  const [quality, setQuality] = useState("standard");
+  const [size, setSize] = useState("1024x1024");
+  const [style, setStyle] = useState("vivid");
 
   function download(url) {
     axios
@@ -51,7 +54,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>L'Art Coquette</title>
+        <title>DALL-E 3 Web UI</title>
       </Head>
 
       <main className={styles.main}>
@@ -78,20 +81,49 @@ export default function Home() {
           <button onClick={getImages}>Get {number} Images</button>
         </p>
         <small>
+          Quality:{" "}
+          <select
+            style={{ marginRight: '20px' }}
+            id="quality"
+            value={quality}
+            onChange={(e) => setQuality(e.target.value)}>
+            <option value="standard">Standard</option>
+            <option value="hd">HD</option>
+          </select>
+
+          Size:{" "}
+          <select
+            style={{ marginRight: '20px' }}
+            id="size"
+            value={size}
+            onChange={(e) => setSize(e.target.value)}>
+            <option value="1024x1024">1024x1024</option>
+            <option value="1792x1024">1792x1024</option>
+            <option value="1024x1792">1024x1792</option>
+          </select>
+
+          Style:{" "}
+          <select
+            style={{ marginRight: '20px' }}
+            id="style"
+            value={style}
+            onChange={(e) => setStyle(e.target.value)}>
+            <option value="vivid">Vivid</option>
+            <option value="natural">Natural</option>
+          </select>
+
           Download as:{" "}
           <select
+            style={{ marginRight: '20px' }}
             id="type"
             value={type}
-            onChange={(e) => setType(e.target.value)}
-          >
+            onChange={(e) => setType(e.target.value)}>
             <option value="webp">Webp</option>
             <option value="png">Png</option>
             <option value="jpg">Jpg</option>
             <option value="gif">Gif</option>
             <option value="avif">Avif</option>
           </select>
-          {" "}
-          Click the image below and save.
         </small>
         <br />
         {error ? (<div className={styles.error}>Something went wrong. Try again.</div>) : (<></>)}
