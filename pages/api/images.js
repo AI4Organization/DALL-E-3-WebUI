@@ -7,9 +7,11 @@ export default async function handler(req, res) {
 
   const response = await openai.images.generate({
     prompt: req.query.p,
-    n: parseInt(req.query.n), // TODO n = 1, implement: quality?: 'standard' | 'hd'; size?: '1024x1024' | '1792x1024' | '1024x1792'; style?: 'vivid' | 'natural';
-    size: "1024x1024",
-    model: 'dall-e-3'
+    n: parseInt(req.query.n),
+    size: req.query.s,
+    model: 'dall-e-3',
+    quality: req.query.q,
+    style: req.query.st,
   }, {
     stream: true
   });
