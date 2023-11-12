@@ -7,7 +7,7 @@ import axios from "axios";
 
 export default function Home() {
   const [prompt, setPrompt] = useState("");
-  const [number, setNumber] = useState(1);
+  const [numImages, setNumImages] = useState(1);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
