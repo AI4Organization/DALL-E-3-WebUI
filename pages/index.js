@@ -18,7 +18,7 @@ export default function Home() {
       setError(false);
       setLoading(true);
       axios
-        .post(`/api/images?t=${token}&p=${prompt}&n=${number}&q=${quality}&s=${size}&st=${style}`)
+        .post(`/api/images?token=${token}&prompt=${prompt}&numImages=${number}&quality=${quality}&size=${size}&style=${style}`)
         .then((res) => {
           setResults(res.data.result);
           setLoading(false);
