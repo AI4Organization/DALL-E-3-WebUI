@@ -12,8 +12,6 @@ export default async function handler(req, res) {
     model: 'dall-e-3',
     quality: req.query.q,
     style: req.query.st,
-  }, {
-    stream: true
   });
   console.log(response.data);
   res.status(200).json({ result: response.data });

@@ -83,16 +83,17 @@ export default function Home() {
         <small>
           Quality:{" "}
           <select
+            style={{ marginRight: '20px' }}
             id="quality"
             value={quality}
             onChange={(e) => setQuality(e.target.value)}>
-            <option value="standard">standard</option>
-            <option value="hd">hd</option>
+            <option value="standard">Standard</option>
+            <option value="hd">HD</option>
           </select>
-        </small>
-        <small>
+
           Size:{" "}
           <select
+            style={{ marginRight: '20px' }}
             id="size"
             value={size}
             onChange={(e) => setSize(e.target.value)}>
@@ -100,32 +101,29 @@ export default function Home() {
             <option value="1792x1024">1792x1024</option>
             <option value="1024x1792">1024x1792</option>
           </select>
-        </small>
-        <small>
+
           Style:{" "}
           <select
+            style={{ marginRight: '20px' }}
             id="style"
             value={style}
             onChange={(e) => setStyle(e.target.value)}>
-            <option value="vivid">vivid</option>
-            <option value="natural">natural</option>
+            <option value="vivid">Vivid</option>
+            <option value="natural">Natural</option>
           </select>
-        </small>
-        <small>
+
           Download as:{" "}
           <select
+            style={{ marginRight: '20px' }}
             id="type"
             value={type}
-            onChange={(e) => setType(e.target.value)}
-          >
+            onChange={(e) => setType(e.target.value)}>
             <option value="webp">Webp</option>
             <option value="png">Png</option>
             <option value="jpg">Jpg</option>
             <option value="gif">Gif</option>
             <option value="avif">Avif</option>
           </select>
-          {" "}
-          Click the image below and save.
         </small>
         <br />
         {error ? (<div className={styles.error}>Something went wrong. Try again.</div>) : (<></>)}
