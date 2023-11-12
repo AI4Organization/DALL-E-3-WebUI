@@ -44,6 +44,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - Since V2 is using OpenAI official API.
 
 ## This project is inspired by the [original one](https://github.com/1998code/DALLE-2-App) with benefits
-### OpenAI SDK latest
-### NextJS v14.x
-### DALL-E 3
+- OpenAI SDK latest
+- NextJS v14.x
+- DALL-E 3
+- React latest
