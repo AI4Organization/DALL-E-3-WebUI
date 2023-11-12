@@ -5,14 +5,20 @@ export default async function handler(req, res) {
     apiKey: process.env.OPENAI_API_KEY,
   });
 
+  const { p: prompt, n, s: size, q: quality, st: style } = req.query;
+  if (!prompt || !n || !size || !quality || !style) {
+    return res.status(400).json({ error: 'Missing required parameters' });
+  }
+
   const response = await openai.images.generate({
-    prompt: req.query.p,
-    n: parseInt(req.query.n),
-    size: req.query.s,
+    prompt,
+    n: parseInt(n),
+    size,
     model: 'dall-e-3',
-    quality: req.query.q,
-    style: req.query.st,
+    quality,
+    style,
   });
+
   console.log(response.data);
   res.status(200).json({ result: response.data });
 }
