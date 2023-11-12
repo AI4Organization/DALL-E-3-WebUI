@@ -81,36 +81,20 @@ export default function Home() {
           <button onClick={getImages}>Get {number} Images</button>
         </p>
         <small>
-          Quality:{" "}
-          <select
-            style={{ marginRight: '20px' }}
-            id="quality"
-            value={quality}
-            onChange={(e) => setQuality(e.target.value)}>
-            <option value="standard">Standard</option>
-            <option value="hd">HD</option>
-          </select>
+          const SelectDropdown = ({ id, value, onChange, options }) => (
+            <select
+              style={{ marginRight: '20px' }}
+              id={id}
+              value={value}
+              onChange={onChange}>
+              {options.map(option => <option key={option} value={option}>{option}</option>)}
+            </select>
+          );
 
-          Size:{" "}
-          <select
-            style={{ marginRight: '20px' }}
-            id="size"
-            value={size}
-            onChange={(e) => setSize(e.target.value)}>
-            <option value="1024x1024">1024x1024</option>
-            <option value="1792x1024">1792x1024</option>
-            <option value="1024x1792">1024x1792</option>
-          </select>
-
-          Style:{" "}
-          <select
-            style={{ marginRight: '20px' }}
-            id="style"
-            value={style}
-            onChange={(e) => setStyle(e.target.value)}>
-            <option value="vivid">Vivid</option>
-            <option value="natural">Natural</option>
-          </select>
+          // Usage:
+          <SelectDropdown id="quality" value={quality} onChange={(e) => setQuality(e.target.value)} options={["standard", "hd"]} />
+          <SelectDropdown id="size" value={size} onChange={(e) => setSize(e.target.value)} options={["1024x1024", "1792x1024", "1024x1792"]} />
+          <SelectDropdown id="style" value={style} onChange={(e) => setStyle(e.target.value)} options={["vivid", "natural"]} />
 
           Download as:{" "}
           <select
