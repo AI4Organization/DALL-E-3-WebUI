@@ -92,6 +92,11 @@ export default function Home() {
             </select>
           );
 
+          export default function Home() {
+            ...
+          }
+          );
+
           // Usage:
           <SelectDropdown id="quality" value={quality} onChange={(e) => setQuality(e.target.value)} options={["standard", "hd"]} />
           <SelectDropdown id="size" value={size} onChange={(e) => setSize(e.target.value)} options={["1024x1024", "1792x1024", "1024x1792"]} />
