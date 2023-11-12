@@ -38,7 +38,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 ## Usage
 1. Input token start from `sk-`
 2. Query anything, e.g. `cat on space`:
-<img width="1024" alt="CleanShot 2022-06-18 at 16 36 25@2x" src="https://github.com/AI4Organization/DALL-E-3-WebUI/blob/develop/assets/CleanShot%202023-11-07%20at%2019.46.29%402x.png">
+<img width="1024" alt="CleanShot 2022-06-18 at 16 36 25@2x" src="https://github.com/AI4Organization/DALL-E-3-WebUI/blob/develop/assets/CleanShot%202023-11-12%20at%2023.02.37%402x.png">
 
 ## Developer Notes
 - Since V2 is using OpenAI official API.
